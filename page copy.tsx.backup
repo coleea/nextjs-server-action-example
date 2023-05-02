@@ -1,0 +1,43 @@
+import SystemInfo from 'components/server-info'
+import Stories from 'components/stories'
+import Footer from 'components/footer'
+
+// Utils
+import fetchData from 'lib/fetch-data'
+import { useState } from 'react';
+
+// warning: Only plain objects can be passed to Client Components from Server Components. 
+// Classes or other objects with methods are not supported.  
+
+// Unhandled Runtime Error
+// RangeError: Maximum call stack size exceeded
+async function onlyServer() {
+    'use server'
+    console.log('it is consoled in use server function');
+    return JSON.stringify({a: 1})
+    
+}
+export default async function RSCPage() {
+
+  // It only works in a Client Component
+  // const [a, setA] = useState(0);
+  console.log('데이터를 fetch함');
+  
+  const storyIds = await fetchData('topstories')
+
+  // console.log(storyIds);
+  
+  return (
+    <>
+      {/* @ts-expect-error Server Component */}
+      <Stories page={1} storyIds={storyIds} />
+      <Footer />
+      <SystemInfo />
+      {/* Error: Event handlers cannot be passed to Client Component props.
+      <div className="" onClick={function} children=...>                            ^^^^^^^^^^
+      If you need interactivity, consider converting part of this to a Client Component.
+      */}
+      <div className="" onClick={() => {console.log('onlyServer 콜') ; onlyServer()}}>some button</div>
+    </>
+  )
+}
