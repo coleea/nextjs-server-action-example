@@ -38,14 +38,14 @@ export default function Form() {
           <form method="POST" action="" >
             <input type="text" name="$$id" value={nowhere.$$id} hidden readOnly />
             <button type="submit" id="nowhere" style={{padding : "1em"}}>
-              page not found로 리다이렉팅
+              {`Page Not Found로 리다이렉팅`}
             </button>
           </form>
         </div>
         <form action={file}>
           <input type="file" name="file" id="file" required />
-          <button type="submit" id="upload">
-            Upload file
+          <button type="submit" id="upload" style={{padding : "1em"}}>
+            Upload File
           </button>
         </form>
     </div>
