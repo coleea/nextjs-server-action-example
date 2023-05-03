@@ -27,7 +27,7 @@ this `api-call-server` module is the key for Server Actions.
 
 Every Server Actions use this module for Server Request
 
-if you call the function that contains `"use server"` statement, it actually calls `CallServer Function` in `api-call-server.js` for server request. 
+if you call the function that contains `"use server"` statement, it actually calls `CallServer` function in `api-call-server.js` for server request. 
 
 
 
@@ -35,10 +35,11 @@ if you call the function that contains `"use server"` statement, it actually cal
 ### The Key Points is three
 
 - Actions Id
-    - Every Server Actions(use-server functions) have unique id. it can be used for routing on server-side
+    - Every Server Actions(also called `use-server` functions) have their unique id. it can be used for routing on server-side
 
-- `Next Actions` field in Header
-    - This field contains Actions Id. Server check this and identifies the type of action
+- `Next Actions` field in Request Header
+    - This field contains `Actions Id`. Server identifies the type of action and routes.
+
 
 - fetch body : your function arguments will be here
 
@@ -57,14 +58,10 @@ This is 100% autometically generated. So you don't need to do anything
 
 <img src="public/use-server-function-example-v2.png">
 
-
-
-- or make ts file. and add the `"use server"` statement on the first line. then this module will be collection of API Endpoint. 
-
-for example 
+- or make ts file. and add the `"use server"` statement on the first line. then this module will be collection of API Endpoint. for example 
 
 <img src="public/use-server-module-example.png">
 
-in this example, `inc` and `dec` functions are API Endpoint.you don't need any configuration for routing  at all.
+in this example, `inc` and `dec` functions become API Endpoint. you don't need any configuration for routing  at all.
 
-you can use this functions on another server-components module
+you can use this functions on another server-components module.
