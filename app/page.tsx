@@ -3,6 +3,22 @@ import Form from './form'
 
 import dec, { inc } from './actions'
 
+
+
+
+
+const double = async (x) => {
+  'use server'
+  console.log('log in server side');          
+  return x * 2
+}
+
+
+
+
+double 
+
+
 export default function Page() {
   const two = 2
   return (
@@ -10,11 +26,21 @@ export default function Page() {
       <Counter
         inc={inc}
         dec={dec}
+
+
+
+
+
         double={async (x) => {
           'use server'
-          console.log('this is in use server function');          
+          console.log('log in server side');          
           return x * two
         }}
+
+
+
+
+
       />
       <br/>
       <br/>

@@ -47,9 +47,14 @@ This is 100% autometically generated. So you don't need to do anything
 
 ## How Can I Use This?
 
-- I tested this using next.js `13.3.2-canary.14` version. so if you test next-actions, this version is recommanded.
-- You must use App Routing, not page routing
-- in app directory, write some function the must return promise. and add `"use server"` in the first line. then, this function will be sort of API Endpoint
+- I tested this using next.js `13.3.2-canary.14` version. so if you want to test `next-actions`, this version is recommanded.
+- You must use `App Routing`, not Page routing
+- in App directory, write some function the must return promise. and add `"use server"` in the first line. then, this function will be sort of API Endpoint. for example
+
+<img src="public/use-server-function-example-v2.png">
+
+
+
 - or make ts file. and add the `"use server"` statement on the first line. then this module will be collection of API Endpoint. 
 example 
 
