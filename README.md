@@ -1,7 +1,7 @@
 # Next.js Server Actions (aka use-server)
 
 
-## run on your machine 
+## Run on your machine 🚀
 
 `pnpm i`
 
@@ -9,7 +9,12 @@
 
 ---
 
-## `api-call-server` Module
+
+## How this works? 🤔
+
+1 line answer : `api-call-server` Module
+
+detail answer :
 
 when next.js is compiled, this module is autometically generated.
 
@@ -32,3 +37,5 @@ The Key Points is three
     - This field contains Actions Id. Server check this and identifies the type of action
 
 - fetch body : your function arguments will be here
+
+This is 100% autometically generated. So you don't need to do anything
