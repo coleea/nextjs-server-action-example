@@ -15,22 +15,17 @@ export default function Counter({ inc, dec, double }) {
           setCount(newCount)
         }}
       >
-        +1
+        +1  (check this in devtools' network tab)
       </button>
-      {/* <button
+      <button
         id="dec"
         onClick={async () => {
           const newCount = await dec(count)
           setCount(newCount)
         }}
       >
-        -1
-      </button> */}
-
-
-
-
-      
+        -1  (check this in devtools' network tab)
+      </button>
       <button
         id="double"
         onClick={async () => {
@@ -38,12 +33,7 @@ export default function Counter({ inc, dec, double }) {
           setCount(newCount)
         }}
       >
-
-
-
-
-        
-        *2 (use-server 함수가 호출됨)
+        *2  (check this in devtools' network tab)
       </button>
     </div>
   )
