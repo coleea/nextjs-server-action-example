@@ -4,7 +4,7 @@ import dec, { inc } from './actions'
 
 const double = async (x) => {
   'use server'
-  console.log('log in server side');          
+  console.log('double function is called on server side');          
   return x * 2
 }
 

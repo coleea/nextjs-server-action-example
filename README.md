@@ -50,7 +50,10 @@ This is 100% autometically generated. So you don't need to do anything
 
 - I tested this using next.js `13.3.2-canary.14` version. so if you want to test `next-actions`, this version is recommanded.
 - You must use `App Routing`, not Page routing
-- in App directory, write some function that must return Promise object. and add `"use server"` in the first line. then, this function will be sort of API Endpoint. for example
+- in App directory, write some function. we call it `Server actions`
+- Server actions must be async function. returning promise is not enough. if it is not async function. compile error occurs.
+- add `"use server"` statement in the first line of `Server actions`.
+- congraturations. this function will be sort of API Endpoint. for example
 
 <img src="public/use-server-function-example-v2.png">
 
