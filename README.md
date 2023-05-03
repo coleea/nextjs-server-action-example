@@ -35,7 +35,8 @@ if you call the function that contains `"use server"` statement, it actually cal
 ### The Key Points is three
 
 - Actions Id
-    - Every Server Actions(also called `use-server` functions) have their unique id. it can be used for routing on server-side
+    - Every Server Actions(also called `use-server` functions) have their unique id. it is encrypted 40 length string such as `3423bbcaf2db7231d9d941aa74bd88dc0cc6e332`.
+    it can be used for routing on server-side
 
 - `Next Actions` field in Request Header
     - This field contains `Actions Id`. Server identifies the type of action and routes.
