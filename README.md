@@ -32,7 +32,7 @@ if you call the function that contains `"use server"` statement, it actually cal
 
 
 
-### The Key Points is three
+### The Three Key Points
 
 - Actions Id
     - Every Server Actions(also called `use-server` functions) have their unique id. it is encrypted 40 length string such as `3423bbcaf2db7231d9d941aa74bd88dc0cc6e332`.
