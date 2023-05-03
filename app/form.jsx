@@ -25,28 +25,30 @@ async function file(formData) {
 export default function Form() {
   return (
     <>
-      <hr />
-      <form method="POST" action="">
-        <input type="text" name="$$id" value={action.$$id} hidden readOnly />
-        <input type="text" name="name" id="name" required />
-        <button type="submit" id="submit">
-          Submit
-        </button>
-      </form>
-      <hr />
-      <form method="POST" action="">
-        <input type="text" name="$$id" value={nowhere.$$id} hidden readOnly />
-        <button type="submit" id="nowhere">
-          page not found로 리다이렉팅
-        </button>
-      </form>
-      <hr />
-      <form action={file}>
-        <input type="file" name="file" id="file" required />
-        <button type="submit" id="upload">
-          Upload file
-        </button>
-      </form>
+    <div align="center" className="" style={{display :"flex", flexDirection : "column", "gap" : "3em", marginTop : "3em"}}>
+
+        <form method="POST" action="">
+          <input type="text" name="$$id" value={action.$$id} hidden readOnly />
+          <input type="text" name="name" id="name" required />
+          <button type="submit" id="submit">
+            Submit
+          </button>
+        </form>
+        <div className="" >
+          <form method="POST" action="" >
+            <input type="text" name="$$id" value={nowhere.$$id} hidden readOnly />
+            <button type="submit" id="nowhere" style={{padding : "1em"}}>
+              page not found로 리다이렉팅
+            </button>
+          </form>
+        </div>
+        <form action={file}>
+          <input type="file" name="file" id="file" required />
+          <button type="submit" id="upload">
+            Upload file
+          </button>
+        </form>
+    </div>
     </>
   )
 }

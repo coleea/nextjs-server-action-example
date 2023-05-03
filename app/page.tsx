@@ -16,7 +16,7 @@ export default function Page() {
         dec={dec}
         double={double}
       />
-      {/* <Form /> */}
+      <Form />
     </>
   )
 }

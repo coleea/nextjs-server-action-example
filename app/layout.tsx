@@ -1,5 +1,5 @@
 import './globals.css'
-import Header from 'components/header'
+// import Header from 'components/header'
 
 export const metadata = {
   title: 'Next.js 13 + React Server Components Demo',
